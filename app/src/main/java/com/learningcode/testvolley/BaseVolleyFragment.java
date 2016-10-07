@@ -1,6 +1,7 @@
 package com.learningcode.testvolley;
 
 import android.app.Fragment;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -58,5 +59,10 @@ public class BaseVolleyFragment extends Fragment {
     public void onConnectionFailed(String error) {
         getActivity().setProgressBarIndeterminateVisibility(false);
         Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT).show();
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 }
